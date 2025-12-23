@@ -1,71 +1,65 @@
-# marp-paste-mac README
-
-This is the README for your extension "marp-paste-mac". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Voici un **README.md** professionnel, clair et optimisé pour le Marketplace de VS Code. Il met en avant la simplicité d'utilisation et précise bien les spécificités liées à macOS.
 
 ---
 
-## Following extension guidelines
+# Markdown Image Paster (Mac) 📸
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+**Markdown Image Paster** est une extension VS Code conçue pour simplifier la gestion des images dans vos fichiers Markdown. Copiez une image (capture d'écran, navigateur, aperçu) et collez-la directement avec `Cmd+V` : l'extension s'occupe de créer le fichier et d'insérer le lien.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+> **Note :** Cette extension est optimisée exclusivement pour **macOS** (utilise AppleScript pour accéder au presse-papier).
 
-## Working with Markdown
+---
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+## ✨ Fonctionnalités
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+* 🚀 **Collage Instantané** : Utilisez le raccourci natif `Cmd+V`. Si le presse-papier contient une image, elle est sauvegardée. Si c'est du texte, le comportement normal de VS Code est conservé.
+* 📁 **Gestion automatique du dossier `res**` : Crée automatiquement un dossier `res/` pour stocker vos images si celui-ci n'existe pas.
+* 🔗 **Lien relatif automatique** : Insère immédiatement le lien Markdown `![image-X.png](res/image-X.png)` à l'endroit de votre curseur.
+* ⚙️ **Flexible** : Choisissez où stocker vos images via les paramètres.
 
-## For more information
+---
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## ⚙️ Configuration
 
-**Enjoy!**
+L'extension propose une option de configuration pour s'adapter à votre structure de projet :
+
+| Paramètre | Description | Défaut |
+| --- | --- | --- |
+| `mdPaster.saveAtRoot` | Si `true`, crée le dossier `res/` à la racine du workspace. Si `false`, le crée dans le dossier du fichier Markdown actif. | `false` |
+
+---
+
+## 🚀 Comment l'utiliser ?
+
+1. Faites une capture d'écran (`Cmd+Ctrl+Shift+4`) ou copiez une image depuis votre navigateur.
+2. Allez dans votre fichier `.md` sur VS Code.
+3. Appuyez sur **`Cmd+V`**.
+4. L'image est enregistrée dans le dossier `res/` et le lien est inséré.
+
+---
+
+## 🛠️ Installation
+
+* Ouvrez VS Code.
+* Allez dans l'onglet Extensions (`Ctrl+Shift+X`).
+* Cherchez **"Markdown Image Paster (Mac)"**.
+* Cliquez sur **Install**.
+
+---
+
+## 📋 Prérequis
+
+* **Système d'exploitation** : macOS uniquement.
+* **Permissions** : VS Code peut demander l'accès pour exécuter un script système lors du premier collage (AppleScript).
+
+---
+
+## 📝 Licence
+
+Distribué sous la licence MIT. Voir `LICENSE` pour plus d'informations.
+
+---
+
+**Une idée d'amélioration ?** N'hésitez pas à ouvrir une *issue* sur le dépôt GitHub !
+
+

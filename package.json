@@ -2,13 +2,18 @@
   "name": "marp-paste-mac",
   "displayName": "Marp paste Mac",
   "description": "Paste images at the good spot directly",
-  "version": "0.0.1",
+  "publisher": "Nisseya",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.107.0"
   },
   "categories": [
     "Other"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nisseya/marp-paste-mac"
+  },
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
